@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VolcraLab</title>
+    <link rel="stylesheet" href="Volcralab.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="head-navbar">
+           <div class="header-left">
+               <div class="logo-wrapper" id="logo-wrapper">
+                   <img src="logovolcra.jpeg" class="header-logo" alt="VOLCRA.LAB" />
+                   <span class="header-title">VOLCRA.LAB</span>
+               </div>
+               <div class="logo-dropdown" id="logo-dropdown" style="display:none;">
+                   <a href="../../website_esp32s3_cam/esp32s3cam.html" class="dropdown-item">ESP32 Camera</a>
+               </div>
+           </div>
+
+           <nav class="nav-wrap" aria-label="main navigation">
+               <ul class="ul-navbar">
+                   <li class="list-navbar"><a href="#top" class="a-navbar active">home</a></li>
+                   <li class="list-navbar"><a href="#services" class="a-navbar">services</a></li>
+                   <li class="list-navbar"><a href="#showcase" class="a-navbar">showcase</a></li>
+                   <li class="list-navbar"><a href="contact.html" class="a-navbar">contact</a></li>
+               </ul>
+           </nav>
+
+           <a class="nav-cta" href="https://wa.me/6285953249060?text=Halo%20VOLCRA.LAB%2C%20saya%20ingin%20membahas%20project%20teknologi%20saya." target="_blank" rel="noopener noreferrer">Start Project</a>
+        </header>
+
+        <main class="main-content">
+           <section class="hero-section">
+               <div class="hero-glow hero-glow--one"></div>
+               <div class="hero-glow hero-glow--two"></div>
+
+               <div class="hero-copy reveal">
+                   <span class="eyebrow">Electronics · IoT · Product Design</span>
+                   <h1>We build <span>smarter tech</span> for bold ideas.</h1>
+                   <p>
+                       VOLCRA.LAB combines embedded systems, product design, and digital experiences
+                       to turn prototypes into polished, high-impact solutions.
+                   </p>
+
+                   <div class="cta-row">
+                       <a class="primary-btn" href="https://wa.me/6285953249060?text=Halo%20VOLCRA.LAB%2C%20saya%20ingin%20membahas%20project%20saya." target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+                       <a class="secondary-btn" href="#showcase">View Showcase</a>
+                   </div>
+
+                   <div class="hero-badges" aria-label="core capabilities">
+                       <span>IoT</span>
+                       <span>Embedded</span>
+                       <span>Automation</span>
+                       <span>Web Dashboard</span>
+                   </div>
+               </div>
+
+               <div class="brand-scene" aria-hidden="true">
+                   <div class="brand-orbit orbit-one"></div>
+                   <div class="brand-orbit orbit-two"></div>
+                   <div class="brand-panel panel-top">
+                       <span>ESP32</span>
+                       <strong>Vision Lab</strong>
+                   </div>
+                   <div class="brand-panel panel-mid">
+                       <span>Firmware</span>
+                       <strong>Smart Systems</strong>
+                   </div>
+                   <div class="brand-panel panel-bottom">
+                       <span>IoT</span>
+                       <strong>Realtime Control</strong>
+                   </div>
+               </div>
+
+               <div class="logo-zone" id="logoZone">
+                   <div class="logo-core">
+                       <canvas id="chipCanvas" width="140" height="140"></canvas>
+                       <img src="logovolcra.jpeg" id="chipLogoImg" class="chip-logo-img" alt="VOLCRA.LAB" />
+                   </div>
+               </div>
+
+               <div class="right-zone" id="rightZone">
+                   <svg id="circSVG" class="circuit-svg" viewBox="0 0 130 300" xmlns="http://www.w3.org/2000/svg">
+                       <path id="cp1" fill="none" stroke="#4A9CC7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M0,150 L14,150 L14,90 L28,90 L28,70 L44,70 L44,50 L130,50" stroke-dasharray="400" stroke-dashoffset="400"/>
+                       <path id="cp1b" fill="none" stroke="#4A9CC7" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity=".5" d="M28,90 L28,80 L36,80 L36,60 L50,60" stroke-dasharray="100" stroke-dashoffset="100"/>
+                       <path id="cp1c" fill="none" stroke="#4A9CC7" stroke-width="1" stroke-linecap="round" opacity=".3" d="M44,70 L44,62 L38,62" stroke-dasharray="50" stroke-dashoffset="50"/>
+                       <circle id="dot1" cx="130" cy="50" r="3" fill="#4A9CC7" opacity="0"/>
+                       <circle id="dot1b" cx="50" cy="60" r="2" fill="#4A9CC7" opacity="0"/>
+                       <circle id="dot1c" cx="38" cy="62" r="2" fill="#4A9CC7" opacity="0"/>
+
+                       <path id="cp2" fill="none" stroke="#4A9CC7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M0,150 L22,150 L22,138 L40,138 L40,150 L130,150" stroke-dasharray="300" stroke-dashoffset="300"/>
+                       <path id="cp2b" fill="none" stroke="#4A9CC7" stroke-width="1" stroke-linecap="round" opacity=".5" d="M22,150 L22,162 L34,162 L34,150" stroke-dasharray="80" stroke-dashoffset="80"/>
+                       <path id="cp2c" fill="none" stroke="#4A9CC7" stroke-width="1" stroke-linecap="round" opacity=".35" d="M40,138 L52,138 L52,128 L66,128" stroke-dasharray="80" stroke-dashoffset="80"/>
+                       <circle id="dot2" cx="130" cy="150" r="3" fill="#4A9CC7" opacity="0"/>
+                       <circle id="dot2b" cx="34" cy="150" r="2" fill="#4A9CC7" opacity="0"/>
+                       <circle id="dot2c" cx="66" cy="128" r="2" fill="#4A9CC7" opacity="0"/>
+
+                       <path id="cp3" fill="none" stroke="#4A9CC7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M0,150 L14,150 L14,210 L28,210 L28,230 L44,230 L44,250 L130,250" stroke-dasharray="400" stroke-dashoffset="400"/>
+                       <path id="cp3b" fill="none" stroke="#4A9CC7" stroke-width="1" stroke-linecap="round" opacity=".5" d="M28,210 L28,222 L40,222 L40,240 L54,240" stroke-dasharray="100" stroke-dashoffset="100"/>
+                       <path id="cp3c" fill="none" stroke="#4A9CC7" stroke-width="1" stroke-linecap="round" opacity=".3" d="M44,230 L44,240 L38,240" stroke-dasharray="50" stroke-dashoffset="50"/>
+                       <circle id="dot3" cx="130" cy="250" r="3" fill="#4A9CC7" opacity="0"/>
+                       <circle id="dot3b" cx="54" cy="240" r="2" fill="#4A9CC7" opacity="0"/>
+                       <circle id="dot3c" cx="38" cy="240" r="2" fill="#4A9CC7" opacity="0"/>
+                   </svg>
+
+                   <div class="cards-col" id="cardsCol">
+                       <a class="vcard" href="#showcase">
+                           <div class="vcard-corner tl"></div><div class="vcard-corner tr"></div>
+                           <div class="vcard-corner bl"></div><div class="vcard-corner br"></div>
+                           <div class="vcard-line-top"></div><div class="vcard-line-left"></div><div class="vcard-line-bot"></div>
+                           <div class="vcard-dot"></div>
+                           <div class="card-tag">[ LAB ]</div>
+                           <div class="card-title">Projects</div>
+                           <div class="card-desc">Smart devices, prototyping, and digital systems</div>
+                           <div class="card-arr">→ explore</div>
+                       </a>
+                       <a class="vcard" href="about.html">
+                           <div class="vcard-corner tl"></div><div class="vcard-corner tr"></div>
+                           <div class="vcard-corner bl"></div><div class="vcard-corner br"></div>
+                           <div class="vcard-line-top"></div><div class="vcard-line-left"></div><div class="vcard-line-bot"></div>
+                           <div class="vcard-dot"></div>
+                           <div class="card-tag">[ WHO ]</div>
+                           <div class="card-title">About</div>
+                           <div class="card-desc">Maker mindset with engineering precision</div>
+                           <div class="card-arr">→ read more</div>
+                       </a>
+                       <a class="vcard" href="contact.html">
+                           <div class="vcard-corner tl"></div><div class="vcard-corner tr"></div>
+                           <div class="vcard-corner bl"></div><div class="vcard-corner br"></div>
+                           <div class="vcard-line-top"></div><div class="vcard-line-left"></div><div class="vcard-line-bot"></div>
+                           <div class="vcard-dot"></div>
+                           <div class="card-tag">[ REACH ]</div>
+                           <div class="card-title">Contact</div>
+                           <div class="card-desc">GitHub · Instagram · TikTok · WhatsApp</div>
+                           <div class="card-arr">→ connect</div>
+                       </a>
+                   </div>
+               </div>
+           </section>
+
+           <section class="stats-strip reveal">
+               <div class="stat-box">
+                   <strong>3+</strong>
+                   <span>Years building</span>
+               </div>
+               <div class="stat-box">
+                   <strong>24</strong>
+                   <span>Projects delivered</span>
+               </div>
+               <div class="stat-box">
+                   <strong>100%</strong>
+                   <span>Custom solutions</span>
+               </div>
+               <div class="stat-box">
+                   <strong>24/7</strong>
+                   <span>Prototype support</span>
+               </div>
+           </section>
+
+           <section class="trust-bar reveal">
+               <span>R&D</span>
+               <span>Embedded</span>
+               <span>Electronics</span>
+               <span>Automation</span>
+               <span>IoT</span>
+               <span>Web Systems</span>
+           </section>
+
+           <section class="services-section reveal" id="services">
+               <div class="section-head">
+                   <span class="small-kicker">What we do</span>
+                   <h2>Creative engineering for modern products.</h2>
+               </div>
+
+               <div class="services-grid">
+                   <article class="service-card">
+                       <div class="service-icon">01</div>
+                       <h3>Embedded Systems</h3>
+                       <p>Firmware, PCB logic, and reliable hardware integration for smart products.</p>
+                   </article>
+                   <article class="service-card">
+                       <div class="service-icon">02</div>
+                       <h3>IoT Solutions</h3>
+                       <p>Sensor networks, automation, and connected systems built for real-world use.</p>
+                   </article>
+                   <article class="service-card">
+                       <div class="service-icon">03</div>
+                       <h3>Web Dashboards</h3>
+                       <p>Clean interfaces and real-time dashboards that make your data easy to understand.</p>
+                   </article>
+                   <article class="service-card">
+                       <div class="service-icon">04</div>
+                       <h3>Prototype Design</h3>
+                       <p>From concept validation to MVP, we help move ideas from sketch to product.</p>
+                   </article>
+               </div>
+           </section>
+
+           <section class="cards-section reveal" id="showcase">
+               <div class="section-head section-head--left">
+                   <span class="small-kicker">Selected work</span>
+                   <h2>Projects built with precision and purpose.</h2>
+               </div>
+
+               <div class="scroll-cards" id="scrollCards">
+                   <a class="sc-card sc-card--1" href="#">
+                       <div class="sc-corner tl"></div><div class="sc-corner tr"></div>
+                       <div class="sc-corner bl"></div><div class="sc-corner br"></div>
+                       <div class="sc-line-top"></div><div class="sc-line-left"></div>
+                       <div class="sc-dot"></div>
+                       <div class="sc-tag">[ LAB ]</div>
+                       <div class="sc-title">Smart Device</div>
+                       <div class="sc-desc">IoT-based product experiences with clean hardware and software pairing.</div>
+                       <div class="sc-arr">→ explore</div>
+                   </a>
+
+                   <a class="sc-card sc-card--2" href="contact.html">
+                       <div class="sc-corner tl"></div><div class="sc-corner tr"></div>
+                       <div class="sc-corner bl"></div><div class="sc-corner br"></div>
+                       <div class="sc-line-top"></div><div class="sc-line-left"></div>
+                       <div class="sc-dot"></div>
+                       <div class="sc-tag">[ REACH ]</div>
+                       <div class="sc-title">Connect</div>
+                       <div class="sc-desc">GitHub · Instagram · TikTok · WhatsApp for faster project conversations.</div>
+                       <div class="sc-arr">→ connect</div>
+                   </a>
+
+                   <a class="sc-card sc-card--3" href="about.html">
+                       <div class="sc-corner tl"></div><div class="sc-corner tr"></div>
+                       <div class="sc-corner bl"></div><div class="sc-corner br"></div>
+                       <div class="sc-line-top"></div><div class="sc-line-left"></div>
+                       <div class="sc-dot"></div>
+                       <div class="sc-tag">[ WHO ]</div>
+                       <div class="sc-title">About Volcra</div>
+                       <div class="sc-desc">Driven by experimentation, design thinking, and engineering execution.</div>
+                       <div class="sc-arr">→ read more</div>
+                   </a>
+               </div>
+           </section>
+
+           <section class="process-section reveal">
+               <div class="section-head">
+                   <span class="small-kicker">How we work</span>
+                   <h2>Simple process. Clear execution.</h2>
+               </div>
+
+               <div class="process-grid">
+                   <div class="process-step">
+                       <span>01</span>
+                       <h3>Discover</h3>
+                       <p>We understand your challenge, target users, and the outcome you want to achieve.</p>
+                   </div>
+                   <div class="process-step">
+                       <span>02</span>
+                       <h3>Design</h3>
+                       <p>We map the interface, architecture, and technical approach before building.</p>
+                   </div>
+                   <div class="process-step">
+                       <span>03</span>
+                       <h3>Build</h3>
+                       <p>We develop the product with practical testing and iterative refinement.</p>
+                   </div>
+               </div>
+           </section>
+
+           <section class="cta-panel reveal">
+               <div class="cta-copy">
+                   <span class="small-kicker">Need a partner?</span>
+                   <h2>Let’s build your next product idea.</h2>
+               </div>
+               <a class="primary-btn" href="https://wa.me/6285953249060?text=Halo%20VOLCRA.LAB%2C%20saya%20ingin%20konsultasi%20mengenai%20project%20saya." target="_blank" rel="noopener noreferrer">Consultation</a>
+           </section>
+        </main>
+
+        <footer class="site-footer">
+           <span class="footer-left">© VOLCRA.LAB</span>
+           <span class="footer-right">Electronics &amp; IoT Laboratory</span>
+        </footer>
+    </div>
+
+    <a class="floating-wa" href="https://wa.me/6285953249060?text=Halo%20VOLCRA.LAB%2C%20saya%20ingin%20membahas%20project%20saya." target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp">
+        WhatsApp
+    </a>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

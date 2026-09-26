@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VOLCRA.LAB — Project ESP32-S3 Camera</title>
+  <link rel="stylesheet" href="esp32s3cam.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+    HEADER
+    Berisi navbar dengan logo, judul, navigasi, dan status ESP32.
+    - .header-left   : tempat logo + judul (sesuaikan sendiri)
+    - .header-nav    : tempat link navigasi ke website utama (sesuaikan sendiri)
+    - .status-badge  : indikator online/offline ESP32-S3 (pojok kanan atas)
+  ============================================================ -->
+  <header class="header">
+    <div class="header-left">
+      <!-- Logo wrapper: klik untuk dropdown -->
+      <div class="logo-wrapper" id="logo-wrapper">
+        <img src="logovolcra.jpeg" alt="VOLCRA.LAB" class="header-logo" />
+        <span class="header-title">VOLCRA.LAB</span>
+      </div>
+
+      <!-- Dropdown menu -->
+      <div class="logo-dropdown" id="logo-dropdown" style="display:none;">
+        <!-- Isi dengan link shortcut yang kamu mau -->
+        <a href="#" class="dropdown-item">Camera ESP32S3</a>
+      </div>
+    </div>
+
+    <div class="head-navbar">
+      <ul class="ul-navbar">
+        <li class="list-navbar">
+          <a href="https://VolcraLab.github.io/volcra-website/volcra_website/templates/Volcralab.html"
+            class="a-navbar">home</a>
+        </li>
+        <li class="list-navbar">
+          <a href="https://VolcraLab.github.io/volcra-website/volcra_website/templates/about.html"
+            class="a-navbar">about</a>
+        </li>
+        <li class="list-navbar">
+          <a href="https://VolcraLab.github.io/volcra-website/volcra_website/templates/contact.html"
+            class="a-navbar">contact</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ============================================================
+    MAIN CONTENT
+    Berisi judul section gallery dan grid foto.
+  ============================================================ -->
+  <main class="main">
+    <!-- SECTION HEADER: judul gallery + jumlah foto -->
+    <div class="section-header">
+      <h2 class="section-title">Gallery</h2>
+      <!-- Jumlah foto diupdate otomatis oleh script.js -->
+      <span class="photo-count" id="photo-count">0 photos</span>
+      <div class="header-right">
+        <!-- STATUS ESP32-S3: diupdate otomatis oleh script.js -->
+        <!-- dot akan berubah warna: hijau = online, merah = offline -->
+        <div class="status-badge" id="esp-status">
+          <span class="status-dot" id="status-dot"></span>
+          <span class="status-text" id="status-text">Checking...</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GALLERY GRID: foto ditampilkan di sini oleh script.js -->
+    <!-- Urutan: terlama dulu (oldest first) -->
+    <!-- 5 foto per baris -->
+    <div class="gallery-grid" id="gallery-grid">
+      <!-- Foto akan di-inject oleh script.js -->
+      <!-- Jika tidak ada foto, akan tampil pesan kosong -->
+    </div>
+
+    <!-- EMPTY STATE: tampil jika belum ada foto -->
+    <div class="empty-state" id="empty-state" style="display:none;">
+      <div class="empty-icon">&#9711;</div>
+      <p class="empty-text">No photos yet</p>
+      <p class="empty-sub">Waiting for ESP32-S3...</p>
+    </div>
+
+  </main>
+
+  <!-- ============================================================
+    LIGHTBOX (POPUP FOTO)
+    Tampil saat foto diklik. Berisi:
+    - .lightbox-overlay : background gelap, klik untuk tutup
+    - .lightbox-img     : foto yang diperbesar
+    - #btn-download     : tombol unduh (pojok kanan atas)
+    - #btn-delete       : tombol hapus (pojok kanan bawah)
+    - #btn-close        : tombol tutup (pojok kiri atas)
+    Semua dikontrol oleh script.js
+  ============================================================ -->
+  <div class="lightbox" id="lightbox" style="display:none;">
+    <div class="lightbox-overlay" id="lightbox-overlay"></div>
+    <div class="lightbox-container">
+
+      <!-- TOMBOL TUTUP: pojok kiri atas lightbox -->
+      <button class="lb-btn lb-close" id="btn-close" title="Close">&#x2715;</button>
+
+      <!-- TOMBOL UNDUH: pojok kanan atas lightbox -->
+      <a class="lb-btn lb-download" id="btn-download" download title="Download">&#8595;</a>
+
+      <!-- FOTO DIPERBESAR -->
+      <img class="lightbox-img" id="lightbox-img" src="" alt="Photo" />
+
+      <!-- NAMA FILE FOTO -->
+      <div class="lightbox-filename" id="lightbox-filename"></div>
+
+      <!-- TOMBOL HAPUS: pojok kanan bawah lightbox -->
+      <button class="lb-btn lb-delete" id="btn-delete" title="Delete">&#128465;</button>
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+    TOAST NOTIFICATION
+    Notifikasi kecil di pojok bawah untuk feedback aksi
+    (berhasil hapus, gagal hapus, dll)
+    Dikontrol oleh script.js fungsi showToast()
+  ============================================================ -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
